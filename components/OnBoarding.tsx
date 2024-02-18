@@ -51,6 +51,12 @@ const OnBoarding = () => {
         ref={slideRef}
       />
 
+      <View className="flex flex-row justify-center items-center my-5">
+      {Array.from(Array(slides.length), (item, index) => (
+    <View key={index} style={{ width: 27, height: 8, backgroundColor: index === currentIndex ? '#1A998E' : 'gray', borderRadius: 5, marginHorizontal: 5 }} />
+  ))}
+      </View>
+
       <TouchableOpacity
         className="flex flex-row justify-center items-center bg-primary p-4 rounded-full mx-6  "
         onPress={goToNextIndex}
@@ -59,7 +65,7 @@ const OnBoarding = () => {
 
         <Text className="font-bold text-white text-[17px]">
           {currentIndex != slideRef.current && currentIndex < slides.length - 1
-            ? currentIndex
+            ? ""
             : "Get Started!"}
         </Text>
       </TouchableOpacity>

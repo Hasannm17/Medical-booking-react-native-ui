@@ -23,7 +23,7 @@ const _layout = () => {
   }
   return (
     <View onLayout={onLayoutRootView} className='flex flex-1'>    
-  <Stack initialRouteName='index' screenOptions={{headerShown:false}} >
+  <Stack initialRouteName='(tabs)' screenOptions={{headerShown:false}} >
     <Stack.Screen name='index' options={{title:"Mainpage"}} />
     <Stack.Screen name='(tabs)' />
   </Stack>
