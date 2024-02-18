@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 const _layout = () => {
   return (
     <>
-      <Tabs screenOptions={{ headerShown: false }} initialRouteName="profile">
+      <Tabs screenOptions={{ headerShown: false }} initialRouteName="index">
         <Tabs.Screen
           name="index"
           options={{
@@ -47,6 +47,7 @@ const _layout = () => {
           }}
         />
       </Tabs>
+
     </>
   );
 };

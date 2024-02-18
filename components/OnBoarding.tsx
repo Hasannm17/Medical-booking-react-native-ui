@@ -26,7 +26,7 @@ const OnBoarding = () => {
       setCurrentIndex(nextIndex);
     }
     if (slideRef.current && currentIndex == slides.length - 1) {
-      router.push("/(tabs)");
+      router.replace("/(tabs)");
     }
   };
 

@@ -3,6 +3,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
   useWindowDimensions,
 } from "react-native";
@@ -14,17 +15,25 @@ import TopDoctors from "../../constants/TopDoctors";
 import Categories from "../../constants/Categories";
 import Categorie from "../../components/Categorie";
 import Search from "../../components/Search";
+import { FontAwesome } from "@expo/vector-icons";
 const index = () => {
   const { width, height } = useWindowDimensions();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView className="relative">
+      <TouchableOpacity className="absolute bottom-6 z-10 right-6">
+        <FontAwesome name="whatsapp" size={50} color="green" className="" />
+      </TouchableOpacity>
+
       <ScrollView showsVerticalScrollIndicator={false}>
         <View
           className="flex flex-row justify-between items-center h-32 mx-5 "
           style={{ height: height / 5 }}
         >
-          <Text className="text-[18px] " style={{ width: width / 2  , fontFamily:"Pop-bold"}}>
+          <Text
+            className="text-[18px] "
+            style={{ width: width / 2, fontFamily: "Pop-bold" }}
+          >
             Find Your desire health solution
           </Text>
 
@@ -45,8 +54,15 @@ const index = () => {
         <Card />
 
         <View className="flex flex-row justify-between items-center mx-7 my-2">
-          <Text className="text-[18px] p-2 m-2" style={{fontFamily:"Pop-bold"}}>Top Doctors</Text>
-          <Text className="text-primary" style={{fontFamily:"Pop-bold"}} >See all</Text>
+          <Text
+            className="text-[18px] p-2 m-2"
+            style={{ fontFamily: "Pop-bold" }}
+          >
+            Top Doctors
+          </Text>
+          <Text className="text-primary" style={{ fontFamily: "Pop-bold" }}>
+            See all
+          </Text>
         </View>
         <ScrollView
           horizontal
